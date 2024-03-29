@@ -1,0 +1,194 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  height: 100vh;
+}
+
+.home-section1 {
+  width: 60%;
+  /* height: 83; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+}
+.h2 {
+  text-align: left;
+  font-size: 60.9px;
+}
+
+.h1 {
+  color: yellow;
+  font-size: 90px;
+}
+
+.h3 {
+  font-size: 36px;
+}
+
+.home-info {
+  margin: 0px 23px;
+}
+
+.home-info > .h1,
+.h2,
+.h3 {
+  font-weight: 600;
+}
+
+.home-section2 {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.man {
+  width: 65%;
+}
+
+.wrapper {
+  display: inline-flex;
+  gap: 0px;
+}
+
+.wrapper > .dynamic-txt {
+  margin-left: -20px;
+  height: 45px;
+  line-height: 45px;
+  /* background-color: red; */
+  overflow: hidden;
+}
+
+.dynamic-txt > li {
+  list-style: none;
+  color: yellow;
+  position: relative;
+  top: 0;
+  animation: slides 6s steps(3) infinite;
+}
+
+@keyframes slides {
+  100% {
+    top: -135px;
+  }
+}
+
+.dynamic-txt li span {
+  position: relative;
+}
+
+.dynamic-txt li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 110%;
+  width: 100%;
+  background-color: #212121;
+  margin-left: 5px;
+  border-left: 2px solid white;
+  animation: typing 2s infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .man {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home {
+    display: block;
+  }
+
+  .home-section1,
+  .home-section2 {
+    width: 100%;
+  }
+
+  .man {
+    width: 50%;
+  }
+
+  .home-section2 {
+    display: flex;
+    align-items: center;
+    margin-top: -200px;
+    justify-content: center;
+  }
+
+  .h1 {
+    font-size: 4em;
+  }
+
+  .h2 {
+    font-size: 3em;
+  }
+
+  .h3 {
+    font-size: 1.9em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .man {
+    display: none;
+  }
+  .h1 {
+    font-size: 3em;
+  }
+  .h3 {
+    font-size: 1.5em;
+  }
+  .wrapper > .dynamic-txt {
+    margin-left: -25px;
+    height: 38px;
+    line-height: 38px;
+    /* background-color: red; */
+    overflow: hidden;
+  }
+  @keyframes slides {
+    100% {
+      top: -114px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .man {
+    display: none;
+  }
+  .h1 {
+    font-size: 2.5em;
+  }
+  .h2 {
+    font-size: 1.85em;
+  }
+  .h3 {
+    font-size: 1.5em;
+  }
+  .wrapper > .dynamic-txt {
+    margin-left: -25px;
+    height: 38px;
+    line-height: 38px;
+    /* background-color: red; */
+    overflow: hidden;
+  }
+  @keyframes slides {
+    100% {
+      top: -114px;
+    }
+  }
+}
